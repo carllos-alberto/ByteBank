@@ -11,12 +11,8 @@ export class NovaTransferenciaComponent {
  /* Reponsável por enviar os dados para outros componentes */
 @Output() aoTransferir = new EventEmitter<any>();        // Através dessa classe EventEmitter eu consigo propagar esse dado.
 
-
-
 valor: number;
 destino: number;
-
-
 
 
 transferir() {

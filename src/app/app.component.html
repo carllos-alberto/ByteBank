@@ -2,7 +2,6 @@
 
 <!-- Recebendo o valor aoTransferir do TS nova-transferência e criando um evento para imprimi-lo no TS root -->
 
-<p>valor: {{ transferencia?.valor }}</p>
-<p>destino: {{ transferencia?.destino }}</p>
+<app-extrato [transferencias]="transferencias" ></app-extrato>
 
-<!-- ? -> significa quer, se tiver alguma informação dentro de valor ele vai trazer, caso contrário não vai fazer nada -->
+<!-- [transferencia] está recebendo o valor da variável transferencia que está dentro do App.component  -->
