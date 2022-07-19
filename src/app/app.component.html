@@ -1,1 +1,8 @@
-<nova-transferencia></nova-transferencia>
+<nova-transferencia (aoTransferir)="transferir($event)"></nova-transferencia>
+
+<!-- Recebendo o valor aoTransferir do TS nova-transferência e criando um evento para imprimi-lo no TS root -->
+
+<p>valor: {{ transferencia?.valor }}</p>
+<p>destino: {{ transferencia?.destino }}</p>
+
+<!-- ? -> significa quer, se tiver alguma informação dentro de valor ele vai trazer, caso contrário não vai fazer nada -->
