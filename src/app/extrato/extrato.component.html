@@ -5,23 +5,18 @@
     <th class="tabela__cabecalho__conteudo">Valor</th>
     <th class="tabela__cabecalho__conteudo">Destino</th>
   </thead>
-  <tbody>
+  <tbody *ngIf="transferencias ?.length > 0; else listaVazia"> <!-- Se tiver algo dentro de transferencias ele continua o código, se não ele entra em lista vazia -->
     <tr class="tabela__linha" *ngFor="let transferencia of transferencias">
       <td class="tabela__conteudo">{{transferencia.data | date: "short" }}</td>
       <td class="tabela__conteudo">{{transferencia.valor | currency }}</td>
       <td class="tabela__conteudo">{{transferencia.destino }}</td>
     </tr>
   </tbody>
-
-
-
 </table>
+<ng-template #listaVazia>
+  <p> Nenhuma Transferência Cadastrada</p>
+</ng-template>
 
-<!-- <div *ngFor="let transferencia of transferencias">
-  <p>Data: {{ transferencia?.data }}</p>
-  <p>Valor: {{ transferencia?.valor }}</p>
-  <p>Destino: {{ transferencia?.destino }}</p>
-</div> -->
 
-<!-- ? -> significa quer, se tiver alguma informação dentro de valor ele vai trazer, caso contrário não vai fazer nada -->
+
 
