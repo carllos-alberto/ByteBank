@@ -8,6 +8,8 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';// comando para colocar os comandos em português
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 registerLocaleData(localePt, 'pt')// comando para colocar os comandos em português
 
@@ -21,8 +23,10 @@ registerLocaleData(localePt, 'pt')// comando para colocar os comandos em portugu
 
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
+
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},         // comando para colocar os comandos em português
     {
