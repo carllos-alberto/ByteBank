@@ -9,6 +9,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';// comando para colocar os comandos em português
 
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing-module';
 
 
 registerLocaleData(localePt, 'pt')// comando para colocar os comandos em português
@@ -24,7 +25,9 @@ registerLocaleData(localePt, 'pt')// comando para colocar os comandos em portugu
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
+
   ],
 
   providers: [
